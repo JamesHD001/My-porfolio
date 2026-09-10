@@ -16,6 +16,8 @@
 - [x] Add a repository-level AGENTS.md with implementation, accessibility, content, and CSS rules.
 - [x] Add a GitHub Pages Actions workflow that deploys the `frontend/` directory.
 - [x] Add a CV entry point from the homepage.
+- [x] Add a mobile-first responsive stylesheet with progressive desktop breakpoints.
+- [x] Load the mobile-first stylesheet from the homepage.
 
 ## Next
 - [ ] Add real project screenshots/mockups when suitable assets are available.
