@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en US">
-    <meta name="charset" description="utf-8">
+<html lang="en">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" description="Henry D. James">
     <title>HENRY D. JAMES | PORTFOLIO</title>
@@ -13,21 +13,32 @@
     <body>
         <header>
             <div class="text-logo">
-                JAMESHD OFFICIAL PORTFOLIO
+                <div class="topnav">
+                    <a href="#home" class="active">JAMESHD OFFICIAL PORTFOLIO</a> 
+                </div>
             </div>
         </header>
+
         <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="pages/project.html">Projects</a></li>
-                <li><a href="pages/about.html">About Me</a></li>
-                <li><a href="pages/contact.html">Contact</a></li>
-            </ul>
+            <!-- Navigation Links -->
+            <div id="myLinks">
+                <a href="#home" class="active">Home</a> 
+                <a href="#pages/project.html">Projects</a>
+                <a href="#pages/about.html">About Me</a>
+                <a href="#pages/contact.html">Contact</a>
+            </div>            
+            <!-- Hamburger Icon -->
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i data-lucide="menu"></i>
+            </a>
+            </div>
         </nav>
+
         <main>
             <div class="hero">
                 <h1>Welcome to My Portfolio</h1>
             </div>
+
             <section class="bio">
                 <div class="henry">
                     <img src="images/henry.png">
@@ -36,16 +47,49 @@
                 <p class="story">
                     My name is Henry and you're welcome to my portfolio.
                     I was born and raised in Delta State Nigeria.
-                    
                 </p>
             </section>
 
+            <section class="qualifics">
+                <div class="edu">
+                    <h2>Educational Journey</h2>
+                    <label>SSCE</label>
+                    <small>Senior School Leaving Certificate -- Temporarily unavailable</small>
+                    <br>
+                    <label>BYU PATHWAY WORLDWIDE</label>
+                    <small>BYU Pathway Worldwide Certificate -- 2025</small>
+                    <br>
+                    <label>BSC SOFT ENG.</label>
+                    <small>Bachelors In Software Engineering -- Ongoing/Expected 2027</small>
+                </div>
+            </section>
+
+            <section class="skills">
+                <h3>Skills</h3>
+                <p>All skills go here</p>
+            </section>
+
+            <section class="experience">
+                <h4>Experiences</h4>
+                <div class="projects">
+                    <h4>Projects</h4>
+                    <p>All projects, sources/links go here</p>
+                </div>
+            </section>
+
         </main>
+
         <footer>
             <div class="footer">
                 &copy; 2025 HENRY D. JAMES - PORTFOLIO | ALL RIGHTS RESERVED
             </div>
+            <div id="date-time"></div>
+            <script src="https://unpkg.com/lucide@latest"></script>
+            <script>
+                lucide.createIcons();
+            </script>
             <script src="scripts/script.js"></script>
         </footer>
+
     </body>
 </html>
