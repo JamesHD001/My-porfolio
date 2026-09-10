@@ -260,6 +260,11 @@ h3 {
     background: radial-gradient(circle at 50% 35%, rgba(184, 255, 77, 0.1), transparent 55%);
 }
 
+.portrait-png{
+    max-height: 290px;
+    width:auto;
+    padding: 0;
+}
 .hero-card-bottom {
     align-items: end;
     letter-spacing: 0;
