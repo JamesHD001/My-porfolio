@@ -108,6 +108,10 @@ body {
     width: min(68vw, 250px);
 }
 
+.hero-card-bottom div {
+    text-align: center;
+}
+
 .about-grid,
 .split-heading {
     grid-template-columns: 1fr;
