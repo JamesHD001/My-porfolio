@@ -108,8 +108,29 @@ body {
     width: min(68vw, 250px);
 }
 
-.hero-card-bottom div {
+.hero-card-bottom {
+    position: relative;
+    display: block;
     text-align: center;
+}
+
+.hero-card-bottom div {
+    display: grid;
+    justify-items: center;
+    gap: 3px;
+    width: 100%;
+    text-align: center;
+}
+
+.hero-card-bottom strong,
+.hero-card-bottom span {
+    text-align: center;
+}
+
+.hero-card-bottom .arrow {
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
 
 .about-grid,
