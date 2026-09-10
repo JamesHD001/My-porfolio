@@ -1,0 +1,334 @@
+/* Mobile-first responsive enhancements */
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.container {
+    width: min(calc(100% - 32px), var(--max));
+}
+
+.section {
+    padding-block: 72px;
+}
+
+.navbar {
+    min-height: 64px;
+    gap: 16px;
+}
+
+.brand {
+    min-width: 0;
+    gap: 9px;
+    font-size: 0.9rem;
+}
+
+.brand-mark {
+    width: 36px;
+    height: 36px;
+    flex: 0 0 36px;
+}
+
+.menu-toggle {
+    display: block;
+    flex: 0 0 42px;
+}
+
+.nav-links {
+    position: absolute;
+    top: calc(100% + 1px);
+    left: 16px;
+    right: 16px;
+    display: grid;
+    gap: 0;
+    padding: 8px;
+    background: rgba(17, 20, 27, 0.98);
+    border: 1px solid var(--line);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+}
+
+.nav-links.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.nav-links a {
+    display: flex;
+    align-items: center;
+    min-height: 48px;
+    padding: 0 12px;
+}
+
+.hero {
+    min-height: auto;
+    grid-template-columns: 1fr;
+    gap: 44px;
+    padding-block: 72px;
+}
+
+.hero h1 {
+    font-size: clamp(2.8rem, 14vw, 4.8rem);
+}
+
+.hero-text {
+    margin: 22px 0 28px;
+    font-size: 1rem;
+}
+
+.hero-actions,
+.contact-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.button {
+    width: 100%;
+    min-height: 52px;
+}
+
+.availability {
+    margin-top: 22px;
+}
+
+.hero-card {
+    min-height: 410px;
+    padding: 18px;
+}
+
+.portrait-placeholder {
+    width: min(68vw, 250px);
+}
+
+.about-grid,
+.split-heading {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-top: 44px;
+}
+
+.about .lead {
+    font-size: 1.3rem;
+}
+
+.facts div {
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.facts strong {
+    max-width: 60%;
+}
+
+.discipline-grid,
+.skill-grid,
+.project-grid {
+    grid-template-columns: 1fr;
+    margin-top: 44px;
+}
+
+.discipline-grid article {
+    min-height: 0;
+    padding: 24px;
+}
+
+.discipline-grid h3 {
+    margin: 36px 0 10px;
+}
+
+.skill-grid article {
+    min-height: 0;
+    padding: 24px;
+}
+
+.skill-grid h3 {
+    margin: 38px 0 12px;
+}
+
+.project-grid {
+    gap: 12px;
+}
+
+.project-card {
+    min-height: 350px;
+    padding: 24px;
+}
+
+.project-content {
+    padding-right: 28px;
+}
+
+.project-card h3 {
+    font-size: 1.7rem;
+}
+
+.project-link {
+    top: 21px;
+    right: 22px;
+}
+
+.projects-footer {
+    text-align: left;
+}
+
+.timeline {
+    margin-top: 44px;
+}
+
+.timeline-item {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 22px 0;
+}
+
+.timeline-item h3 {
+    font-size: 1.2rem;
+}
+
+.contact-section {
+    padding: 80px 0;
+}
+
+.contact-section h2,
+.project-cta h2 {
+    font-size: clamp(2.8rem, 13vw, 4.8rem);
+}
+
+.contact-section p:not(.eyebrow) {
+    margin: 22px 0;
+    font-size: 1rem;
+}
+
+@media (min-width: 700px) {
+    .container {
+        width: min(calc(100% - 48px), var(--max));
+    }
+
+    .nav-links {
+        position: static;
+        display: flex;
+        gap: 24px;
+        padding: 0;
+        background: transparent;
+        border: 0;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+    }
+
+    .nav-links a {
+        min-height: auto;
+        padding: 0;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .hero {
+        grid-template-columns: 1fr 0.8fr;
+        gap: 48px;
+        padding-block: 88px;
+    }
+
+    .hero-actions,
+    .contact-actions {
+        display: flex;
+        grid-template-columns: none;
+    }
+
+    .button {
+        width: auto;
+    }
+
+    .about-grid,
+    .split-heading {
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 56px;
+    }
+
+    .discipline-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skill-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .timeline-item {
+        grid-template-columns: 100px 1fr;
+        gap: 28px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .hero {
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 80px;
+    }
+
+    .discipline-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .skill-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .nav-links,
+    .button,
+    .project-card {
+        transition: none;
+    }
+
+    .marquee-track {
+        animation: none;
+    }
+}
+
+@media (max-width: 380px) {
+    .container {
+        width: min(calc(100% - 24px), var(--max));
+    }
+
+    .hero {
+        padding-block: 56px;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.5rem, 14vw, 3.4rem);
+    }
+
+    .hero-card {
+        min-height: 360px;
+    }
+
+    .hero-card-bottom {
+        gap: 12px;
+    }
+
+    .facts div {
+        display: grid;
+        gap: 5px;
+    }
+
+    .facts strong {
+        max-width: none;
+        text-align: left;
+    }
+}
